@@ -1,0 +1,23 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{baklistings}[2019/05/25 Bakeras package for code listings]
+
+\RequirePackage{listings}
+\RequirePackage{courier}  % used for beautiful fonts in listings
+
+
+\newcommand{\baklstset}[0]{
+  \lstset{
+    basicstyle=\small\ttfamily,
+    language=python,
+    frame=tb,
+    breaklines=true,
+    numbers=left,
+    showstringspaces=false,
+    emphstyle=\underbar,
+    literate={ä}{{\"a}}1 {Ä}{{\"A}}1 {á}{{\'a}}1 
+             {é}{{\'e}}1 
+             {ö}{{\"o}}1 {Ö}{{\"O}}1
+             {ü}{{\"u}}1 {Ü}{{\"U}}1 
+             {ß}{{\ss}}1
+  }
+}
